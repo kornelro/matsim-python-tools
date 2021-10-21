@@ -163,7 +163,7 @@ class PopulationWriter(XmlWriter):
         if facility_id is not None: self._write(f'facility="{facility_id}" ')
         if start_time is not None: self._write(f'start_time="{self.time(start_time)}" ')
         if end_time is not None: self._write(f'end_time="{self.time(end_time)}" ')
-        if duration is not None: self._write(f'duration="{duration}" ')
+        if duration is not None: self._write(f'dur="{self.time(duration)}" ')
         if attributes:
             self._write('>\n')
             self.indent += 1
